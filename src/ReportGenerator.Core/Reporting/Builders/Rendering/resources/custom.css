@@ -37,7 +37,7 @@ th { text-align: left; }
 .overview tr.namespace a { margin-left: 15px; display: block; }
 .overview td { border: solid 1px #c1c1c1; border-collapse: collapse; padding: 2px 5px 2px 5px; }
 div.currenthistory { margin: -2px -5px 0 -5px; padding: 2px 5px 2px 5px; height: 16px; }
-.coverage { border: solid 1px #c1c1c1; border-collapse: collapse; font-size: 5px; height: 10px; }
+.coverage { border-collapse: collapse; font-size: 5px; height: 10px; }
 .coverage td { padding: 0; border: none; }
 .stripped tr:nth-child(2n+1) { background-color: #F3F3F3; }
 
@@ -112,6 +112,8 @@ a.percentagebar {
 .gray { background-color: #dcdcdc; }
 .lightgray { color: #888888; }
 .lightgraybg { background-color: #dadada; }
+
+code { font-family: Consolas, monospace; font-size: 0.9em; }
 
 .toggleZoom { text-align:right; }
 

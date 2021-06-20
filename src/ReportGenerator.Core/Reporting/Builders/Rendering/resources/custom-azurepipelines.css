@@ -39,7 +39,6 @@ ansi
 .overview tr:hover { background: #f4f4f4 }
 div.currenthistory { margin: -6px -5px 0 -5px; padding: 2px 4px 6px 4px; height: 16px; }
 .coverage {
-    border: solid 1px #c1c1c1;
     border-collapse: collapse;
     font-size: 5px;
     height: 10px;

@@ -239,8 +239,11 @@
             $scope.targetdir = 'coveragereport';
             $scope.reporttypes = [ 
                 { name: 'Html', description: 'The default output format. Creates a summary overview (index.htm) and detailed reports for each class.', requiresHistoryDir: false, checked: true },
+                { name: 'HtmlDark', description: 'Same as HTML but with dark look and feel', requiresHistoryDir: false, checked: false },
                 { name: 'HtmlSummary', description: 'Creates a single HTML file (summary.htm) without links.', requiresHistoryDir: false, checked: false  },
+                { name: 'HtmlSummaryDark', description: 'Same as HtmlSummary but with dark look and feel', requiresHistoryDir: false, checked: false  },
                 { name: 'HtmlInline', description: 'Same as HTML but CSS and JavaScript is included in every HTML page. This results in larger file sizes, but can be useful for integration into build servers like Azure DevOps (VSTS), since they may block referenced CSS and JavaScript files.', requiresHistoryDir: false, checked: false  },
+                { name: 'HtmlInlineDark', description: 'Same as HtmlInline but with dark look and feel', requiresHistoryDir: false, checked: false  },
                 { name: 'HtmlInline_AzurePipelines', description: 'Same as HTMLInline but with modified CSS that matches the light look and feel of Azure Pipelines.', requiresHistoryDir: false, checked: false },
                 { name: 'HtmlInline_AzurePipelines_Dark', description: 'Same as HTMLInline but with modified CSS that matches the dark look and feel of Azure Pipelines.', requiresHistoryDir: false, checked: false },
                 { name: 'HtmlChart', description: 'Creates a single HTML file containing a chart with historic coverage information.', requiresHistoryDir: true, checked: false },
