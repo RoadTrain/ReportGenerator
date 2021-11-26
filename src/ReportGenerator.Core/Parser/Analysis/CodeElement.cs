@@ -16,8 +16,23 @@ namespace Palmmedia.ReportGenerator.Core.Parser.Analysis
         /// <param name="lastLine">The number of the last line.</param>
         /// <param name="coverageQuota">The coverage quota.</param>
         internal CodeElement(string name, CodeElementType type, int firstLine, int lastLine, decimal? coverageQuota)
+            : this(name, name, type, firstLine, lastLine, coverageQuota)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CodeElement" /> class.
+        /// </summary>
+        /// <param name="name">The name.</param>
+        /// <param name="fullName">The full name.</param>
+        /// <param name="type">The <see cref="Analysis.CodeElementType"/>.</param>
+        /// <param name="firstLine">The number of the first line.</param>
+        /// <param name="lastLine">The number of the last line.</param>
+        /// <param name="coverageQuota">The coverage quota.</param>
+        internal CodeElement(string name, string fullName, CodeElementType type, int firstLine, int lastLine, decimal? coverageQuota)
         {
             this.Name = name ?? throw new ArgumentNullException(nameof(name));
+            this.FullName = fullName;
             this.CodeElementType = type;
             this.FirstLine = firstLine;
             this.LastLine = lastLine;
@@ -34,6 +49,14 @@ namespace Palmmedia.ReportGenerator.Core.Parser.Analysis
         /// The name.
         /// </value>
         public string Name { get; }
+
+        /// <summary>
+        /// Gets the full name.
+        /// </summary>
+        /// <value>
+        /// The full name.
+        /// </value>
+        public string FullName { get; }
 
         /// <summary>
         /// Gets the <see cref="Analysis.CodeElementType"/>.
